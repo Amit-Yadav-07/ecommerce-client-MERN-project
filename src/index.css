@@ -1,0 +1,59 @@
+@import 'tailwindcss';
+@plugin "daisyui";
+
+body {
+  margin: 0;
+  background-color: rgb(235, 234, 234);
+  min-height: 100vh;
+  height: auto;
+}
+
+h1 {
+  color: black;
+  font-size: 3rem;
+}
+
+.slider-container {
+  height: auto;
+  width: 100%;
+}
+
+.slick-slider button {
+  /* background-color: red; */
+  right: 2%;
+}
+
+.slick-next::before {
+  right: 80%;
+  /* background-color: aqua; */
+  display: none;
+}
+
+.slick-prev::before {
+  left: 80%;
+  background-color: yellowgreen;
+}
+
+svg {
+  cursor: pointer;
+}
+
+.card-parent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  place-items: center;
+  width: 80%;
+  gap: 2rem;
+  margin: 0rem auto;
+  padding-bottom: 3rem;
+}
+
+.product-img-container img {
+  transition: all 0.5s linear;
+}
+
+.product-img-container img:hover {
+  transform: scale(1.1);
+}
+
+/* cart */

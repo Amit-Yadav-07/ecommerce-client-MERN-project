@@ -1,0 +1,7 @@
+export let CLEAR_CART = 'CLEAR_CART'
+export let REMOVE = 'REMOVE'
+export let INCREASE = 'INCREASE'
+export let DECREASE = 'DECREASE'
+export let LOADING = 'LOADING'
+export let DISPLAY_ITEMS = 'DISPLAY_ITEMS'
+export let ADD_TO_CART = 'ADD_TO_CART'

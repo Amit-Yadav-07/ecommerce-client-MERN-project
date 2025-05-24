@@ -1,11 +1,10 @@
 import { REMOVE, DISPLAY_ITEMS, INCREASE, DECREASE, LOADING, CLEAR_CART, ADD_TO_CART } from "./actions";
 
 
-
 const cartReducer = (state, action) => {
 
-
     if (action.type === CLEAR_CART) {
+        localStorage.removeItem('cartItems');
         return { ...state, cart: [] }
     }
 
@@ -43,12 +42,12 @@ const cartReducer = (state, action) => {
         return { ...state, cart: newCart }
     }
 
+
     //    add to cart
     if (action.type === ADD_TO_CART) {
         const newCart = new Map(state.cart);
         const product = action.payload;
         console.log(product);
-        // console.log(newCart);
 
         if (newCart.has(product.id)) {
             const existing = newCart.get(product.id);

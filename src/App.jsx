@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { Home, About, Login, Register, ErrorPage, HomeLayout, Products, Cart, SingleProduct } from './components/index.js'
+import { Home, About, Login, Register, ErrorPage, HomeLayout, Products, Cart, SingleProduct, PaymentSuccess } from './components/index.js'
 
 import { action as registerAction } from './components/Register.jsx'
 import { action as loginAction } from './components/Login.jsx'
@@ -51,6 +51,10 @@ function App() {
           action: registerAction,
           element: <Register />,
         },
+        {
+          path: '/paymentsuccess',
+          element: <PaymentSuccess />,
+        }
       ]
     },
 

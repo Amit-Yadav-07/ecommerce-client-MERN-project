@@ -5,18 +5,22 @@ import { REMOVE, DISPLAY_ITEMS, INCREASE, DECREASE, LOADING, CLEAR_CART, ADD_TO_
 import cartItems from "./Reducer/data";
 import { getTotal } from "./utils/utils";
 
-// console.log(ADD_TO_CART);
+const getCartFromLocalStorage = () => {
+    const storedCart = localStorage.getItem('cartItems');
+    return storedCart ? new Map(JSON.parse(storedCart)) : new Map();
+};
+
 
 const CartContext = createContext();
 
 const initialState = {
     loading: false,
-    cart: []
+    cart: getCartFromLocalStorage()
     // cart: new Map(cartItems.map((item) => {
     //     return [item.id, item]
-    // }))
+    // }));
 }
-
+    
 export const CartProvider = ({ children }) => {
 
     const [state, dispatch] = useReducer(cartReducer, initialState);
@@ -43,7 +47,6 @@ export const CartProvider = ({ children }) => {
     }
 
     const handleAddToCart = (product) => {
-
         dispatch({ type: ADD_TO_CART, payload: product });
         // navigate('/cart'); // optional redirect
     };

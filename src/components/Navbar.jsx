@@ -55,7 +55,7 @@ const Navbar = () => {
                         </ul>
                         <div className="indicator">
                             <span className="indicator-item badge bg-indigo-300 font-bold mr-4">{totalAmount}</span>
-                            <Link className="btn"><FaCartPlus className='text-2xl' /></Link>
+                            <Link to='./Cart' className="btn"><FaCartPlus className='text-2xl' /></Link>
                         </div>
                     </div>
                 </div>

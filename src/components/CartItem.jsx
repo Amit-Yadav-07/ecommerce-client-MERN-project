@@ -9,18 +9,18 @@ const CartItem = ({ items }) => {
     const { remove, increase, decrease } = useCart()
 
     const { id, title, price, img, amount } = items;
-    // console.log(ite);
+    // console.log(item);
 
 
     return (
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 p-4">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 p-4">
             <div className="md:col-span-3  text-white p-2">
                 <img src={img} alt={title} className='rounded' />
             </div>
 
             <div className="md:col-span-7  flex justify-center flex-col text-center text-white p-2">
                 <h3 className='text-1xl'>{title}</h3>
-                <strong>{`$ ${price}`}</strong>
+                <strong>{`₹ ${price}`}</strong>
                 <button type='button' className='btn mx-auto mt-2 cursor-pointer' onClick={() => { remove(id) }}>Remove</button>
             </div>
 

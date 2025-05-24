@@ -5,7 +5,7 @@ import Btn from './Btn.jsx';
 
 
 const transformProductsToCartShape = (products) => {
-    console.log(products);
+    // console.log(products);
     return products.map((product) => ({
         id: product._id,
         title: product.name,
@@ -22,7 +22,7 @@ export const Loader = async () => {
         const response = await customFetch.get('/products/allProducts');
         const data = response?.data?.products;
         const transformedData = transformProductsToCartShape(data);
-        console.log(transformedData);
+        // console.log(transformedData);
         return transformedData;
 
     } catch (error) {

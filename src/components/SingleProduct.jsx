@@ -55,7 +55,7 @@ const SingleProduct = () => {
                     <p>{product.description}</p>
                     <h4 className='my-1'>{product.name}</h4>
                     <strong className='block mb-4'>{product.price}</strong>
-                    {/* <Link to='/cart' className='bg-indigo-400 text-white p-2 px-3 rounded-md mr-auto' onClick={() => { console.log(id) }}>Add to cart</Link> */}
+                    {/* <Link to='https://pages.razorpay.com/stores/st_QRMCACzvsmMdEF/product/li_QRMCAF62wkcuXE' className='bg-indigo-400 text-white p-2 px-3 rounded-md mr-auto'>buy now</Link> */}
                     <button type='button' className='btn' onClick={() => { addToCart() }}>add to cart</button>
                 </div>
             </section>
